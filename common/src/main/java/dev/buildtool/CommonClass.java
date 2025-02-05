@@ -22,6 +22,7 @@ public class CommonClass {
     public static final Supplier<CreativeModeTab> TAB= Suppliers.memoize(() -> CreativeModeTab.builder(CreativeModeTab.Row.TOP,0).icon(() -> new ItemStack(ModItems.PROPELLER.get())).title(Component.literal("Test mod")).displayItems((itemDisplayParameters, output) -> {
         output.accept(ModItems.PROPELLER.get());
         output.accept(ModItems.SEMISTEEL.get());
+        output.accept(ModItems.BLOCK_TRANSPORTER.get());
     }).build());
 
     public static void run() {
